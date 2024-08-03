@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Posts</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="mt-5 mb-4">Posts</h1>
+    <a href="/posts/create" class="btn btn-primary mb-4">Criar Post</a>
+    <ul class="list-group">
+      <% posts.forEach(post=> { %>
+        <li class="list-group-item">
+          <h2 class="h4">
+            <%= post.titulo %>
+          </h2>
+          <p>
+            <%= post.conteudo %>
+          </p>
+          <a href="/posts/<%= post.id %>/edit" class="btn btn-warning btn-sm">Editar</a>
+          <form action="/posts/<%= post.id %>/delete" method="POST" class="d-inline">
+            <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
+          </form>
+        </li>
+        <% }) %>
+    </ul>
+  </div>
+</body>
+
+</html>

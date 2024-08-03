@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="col-md-6">
+      <h2>Registrar</h2>
+      <form action="/users/register" method="POST">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input type="password" name="senha" id="senha" class="form-control" placeholder="Senha" required>
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Registrar</button>
+      </form>
+      <a href="/users/login">Já tem uma conta? Login</a>
+    </div>
+  </div>
+</body>
+
+</html>
